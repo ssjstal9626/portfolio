@@ -1,0 +1,1063 @@
+/*
+  Theme Name: eBusiness
+  Theme URL: https://bootstrapmade.com/ebusiness-bootstrap-corporate-template/
+  Author: BootstrapMade.com
+  License: https://bootstrapmade.com/license/
+*/
+
+/*-----------------------------------------------------------------------------------
+   CSS INDEX
+  ===================
+
+  1. Theme Default CSS (body, link color, section etc)
+  2. Header Area
+   2.1 Stick menu Area
+  3. About Area
+  4.Services Area
+  5.Skill Area
+  6.Faq Area
+  7.Wellcome Area
+  8.Team Area
+  9.Review Area
+  10.Portfolio Area
+  11. Pricing Table
+  12. Testimonials area
+  13. Review Area
+  14. Quote area
+  15.Footer Area
+  16.Home Page-2 Area
+  17.Home Page 3  CSS
+  18.Blog CSS
+  17.Blog Details CSS
+
+-----------------------------------------------------------------------------------*/
+
+/*----------------------------------------*/
+/*  1.  Theme default CSS
+/*----------------------------------------*/
+
+html, body {
+  height: 100%;
+}
+/* 백그라운드 이미지_start */
+.background-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  z-index: -1;
+}
+
+.bg-img {
+  position: absolute;
+  max-width: 180px;
+  opacity: 0.9;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ===== Fixed Images (화면 고정) ===== */
+/* .fixed {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+} */
+
+.left-1 {
+  left: 0;
+  bottom: 800px;
+}
+
+.right-1 {
+  right: 0;
+  bottom: 1500px;
+  
+}
+
+/* ===== Absolute Images (스크롤과 함께) ===== */
+.absolute {
+  position: absolute;
+}
+
+.left-2 {
+  top: 600px;
+  left: 0;
+}
+.left-2 img{
+ 
+}
+.right-2 {
+  bottom: 400px;
+  right: 0;
+}
+.img-big {
+  max-width: 220px;
+}
+/* ===== 반응형 대응 ===== */
+@media screen and (max-width: 768px) {
+  .bg-img {
+    max-width: 100px;
+    opacity: 0.5;
+  }
+}
+/* 백그라운드 이미지_end */
+.floatleft {
+  float: left;
+}
+
+.floatright {
+  float: right;
+}
+
+.alignleft {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.alignright {
+  float: right;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+
+.aligncenter {
+  display: block;
+  margin: 0 auto 15px;
+}
+
+a:focus {
+  outline: 0px solid;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.fix {
+  overflow: hidden;
+}
+
+p {
+  color: #444;
+}
+
+a {
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #96b68d;
+  text-decoration: none;
+}
+
+a:active, a:hover {
+  outline: 0 none;
+}
+
+body {
+  background: #fff none repeat scroll 0 0;
+  color: #444;
+  font-family: 'SUIT Variable', sans-serif;
+  font-size: 14px;
+
+  overflow-x: hidden;
+  line-height: 22px;
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  display: none;
+  background: #E7E4DF;
+  color: #fff;
+  padding: 6px 12px 9px 12px;
+  font-size: 16px;
+  border-radius: 2px;
+  right: 15px;
+  bottom: 15px;
+  transition: background 0.5s;
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 15px;
+  }
+}
+
+.back-to-top:focus {
+  background: #96b68d;
+  color: #fff;
+  outline: none;
+}
+
+.back-to-top:hover {
+  background: #96b68d;
+  color: #fff;
+}
+
+.clear {
+  clear: both;
+}
+
+ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+
+input, select, textarea, input[type="text"], input[type="date"], input[type="url"], input[type="email"], input[type="password"], input[type="tel"], button, button[type="submit"] {
+  -moz-appearance: none;
+  box-shadow: none !important;
+}
+
+div#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: #fff url('../img/preloader.gif') no-repeat center center;
+}
+
+::-moz-selection {
+  background: #96b68d;
+  text-shadow: none;
+}
+
+::selection {
+  background: #96b68d;
+  text-shadow: none;
+  color: #fff;
+}
+
+.area-padding {
+  padding: 100px 0px 80px;
+}
+
+.area-padding-2 {
+  padding: 70px 0px 70px;
+}
+
+.padding-2 {
+  padding-bottom: 90px;
+}
+
+.section-headline h2 {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-style: italic;
+  -webkit-text-stroke: 1px #96b68d;
+  color: #fff;
+  letter-spacing: 1px;
+  display: inline-block;
+  font-size: 30px;
+  padding: 10px 25px;
+  margin-bottom: 50px;
+  position: relative;
+  background: url(../img/h2icon.png) no-repeat right top;
+}
+
+.sec-head {
+  display: inline-block;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 0;
+  margin-left: 10px;
+  padding: 5px 0 10px;
+  transition: all 0.4s ease 0s;
+}
+.single-well p{
+  margin-left: 10px;
+}
+
+/*--------------------------------
+2. Header top Area
+--------------------------------*/
+.header-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: rgba(39, 0, 0, 0);
+  font-family: "IBM Plex Mono";
+  z-index: 9;
+      -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.navbar-header a.navbar-brand {
+  display: inline-block;
+  height: 70px;
+  padding: 15px 0;
+}
+
+.main-menu ul.navbar-nav li {
+  display: inline-block;
+  padding: 0px 25px;
+}
+
+.main-menu ul.navbar-nav li a {
+  background: rgba(39, 0, 0, 0) none repeat scroll 0 0;
+  color: #444;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 20px 0px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.main-menu ul.navbar-nav li.active a::after {
+  bottom: 0px;
+  content: "";
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.main-menu ul.navbar-nav li.active a:hover {
+  background: none;
+  color: #444;
+}
+
+.main-menu ul.navbar-nav li.active a:focus {
+  color: #fff;
+}
+
+.main-menu ul.navbar-nav li.active a {
+  background: rgba(39, 0, 0, 0) none repeat scroll 0 0;
+  color: #fff;
+  position: relative;
+}
+
+.main-menu ul.navbar-nav li a:hover {
+  color: #96b68d;
+}
+.main-menu .navbar-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.navbar {
+  border: medium none;
+  margin-bottom: 0;
+}
+
+.navbar-default {
+  background: rgba(39, 0, 0, 0) none repeat scroll 0 0;
+}
+
+.main-menu ul.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+  background: none;
+  color: #f5d2d2;
+}
+
+.navbar-default .navbar-toggle {
+  background: rgba(39, 0, 0, 0) none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 0;
+  padding: 25px 0px;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+  background-color: transparent;
+  color: #fff;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background: none;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+  width: 30px;
+  height: 2px;
+}
+
+.top-right.text-right {
+  float: center;
+  position: relative;
+  top: 24px;
+  margin-left: 20px;
+
+}
+
+.top-right.text-right>li {
+  float: center;
+  margin: 0px 8px;
+}
+
+.top-right.text-right li a {
+  color: #fff;
+}
+
+/*--------------------------------
+2.1. Stick menu
+/*--------------------------------*/
+
+.header-area.stick {
+  background-color: #fff;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999999;
+      -webkit-transition: all .5s;
+    transition: all .5s;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.stick .navbar-header a.navbar-brand {
+  display: inline-block;
+  height: 90px;
+}
+
+.stick .navbar-brand>img {
+  display: none;
+}
+
+.stick .navbar-brand.sticky-logo>img {
+  display: block;
+}
+
+.stick .main-menu ul.navbar-nav li.active a::after {
+  border: 1px solid #96b68d;
+  bottom: 0px;
+  content: "";
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.stick .main-menu ul.nav>li>a:hover {
+  color: #96b68d;
+}
+
+.stick .main-menu ul.navbar-nav li.active a {
+  background: rgba(255, 205, 205, 0) none repeat scroll 0 0;
+  color: #96b68d;
+  position: relative;
+}
+
+.stick .mainmenu ul#nav>li:hover>a, .stick .mainmenu ul#nav li .mega-menu, .stick .mainmenu ul#nav li ul.sub-menu {
+  background-color: #fff;
+  color: #444;
+  outline: medium none;
+}
+
+.stick .mainmenu ul#nav li:hover ul.sub-menu li a:hover, .mainmenu ul#nav li .mega-menu span>a:hover, .stick .mainmenu ul#nav li .mega-menu-shop a.mega-menu-title:hover {
+  color: #444;
+}
+
+.stick .logo {
+  height: 20px;
+}
+
+.stick .logo a {
+  margin-top: 0px;
+}
+
+.stick .main-menu ul.nav>li>a {
+  color: #444;
+  line-height: 22px;
+  padding: 19px 0px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.stick .navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+  width: 30px;
+  height: 2px;
+}
+
+.stick .navbar-default .navbar-toggle {
+  padding: 10px 0px;
+}
+
+/*------------------------------
+  3. Main Banner Area
+--------------------------------*/
+
+#video_wrap{
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.main_video{
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+.main_video_m {
+    display: none;
+}
+
+@media (max-width:1080px) {
+    .main_video_m {
+        display: block;
+        width: 100%;
+    }
+
+    .main_video {
+        display: none;
+    }
+}
+/*------------------------------
+  3. About Area
+--------------------------------*/
+.row:nth-child(1){
+  text-align: center;
+}
+.about_text_box{
+  padding-left: 50px;
+  padding-top: 50px;
+}
+.single-well>a {
+  display: block;
+}
+.single-well>img{
+  display: block;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.profile_img{
+  width: 370px;
+  padding-top: 30px;
+}
+.well-left .single-well img{
+  width: 100%;
+}
+.single-well ul{
+  margin: 0 5px;
+}
+
+.single-well ul li {
+  color: #444;
+  display: inline-block;
+  padding: 15px 1px;
+}
+
+.single-well ul li i {
+  color: #444;
+  padding-right: 10px;
+  font-size: 12px;
+}
+
+.single-well p {
+  color: #444;
+}
+.profile{
+  line-height: 20px;
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 15px;
+}
+.profile li img{
+  width: 7%;
+}
+
+#about .sec-head{
+  margin-left: 0;
+  line-height: 32px;
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #f5d2d2;
+  font-weight: 600;
+}
+
+.history{
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+/*------------------------------
+  4. Brand Area
+--------------------------------*/
+.project_img {overflow: hidden;
+  display: block;
+  margin-top: 20px;
+  cursor: default;
+  border: 0.5px solid #96b68d;
+  width: 100%;
+  height: auto;
+  position: relative;
+border-radius: 30px;}
+
+.project_img img {width: 100%;
+transition: transform 0.5s ease;}
+
+/* 호버 시 이미지만 확대 */
+.project_img:hover img {
+  transform: scale(1.05);
+}
+
+.project_btn{
+  display: inline-block;
+  padding: 6px 15px;
+  border: 1px solid #96b68d;
+  border-radius: 20px;
+  color: #444;
+}
+.project_btn:hover{
+  color: #fff;
+  background-color: #96b68d;
+}
+.project_btn_box{
+
+}
+/* --------------------------------
+  5.Services Area (resume)
+--------------------------------*/
+/* 세로 점선 */
+.timeline-column {
+  position: relative;
+  margin-left: 25px;
+  padding-left: 25px;
+  border-left: 2px dotted #ccdfc7;
+}
+
+/* 텍스트 항목 */
+.timeline-item {
+  position: relative;
+  margin-bottom: 28px;
+  padding-left: 10px;
+  font-size: 16px;   /* 기존 14px → 16px */
+  line-height: 1.8;  /* 여유 있는 줄 간격 */
+  color: #444;
+}
+
+.timeline-item > span {font-size: 13px;
+color: #777777;}
+
+/* 원 */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: -31px; /* 선 중앙 맞춤 */
+  width: 10px;
+  height: 10px;
+  background-color: #ccdfc7;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+/* hover 시 원 색상 변경 */
+.timeline-item:hover::before {
+  background-color: #96b68d;
+}
+
+/* 서비스 전체 콘텐츠 영역 */
+.services-contents {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px; /* 카드 사이 여백 */
+  margin-top: 30px;
+}
+
+/* 각 카드 컬럼 */
+.services-contents .col-md-4 {
+  flex: 1 1 30%;
+  max-width: 32%;
+}
+
+/* 각 블록 간격, 폰트 */
+.services-details {
+  padding: 40px 20px;
+  font-size: 17px;
+}
+
+.single-services > h4 {
+  font-size: 26px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #444;
+}
+@media (max-width: 991px) {
+  .services-contents .col-md-4 {
+    max-width: 48%;
+    flex: 1 1 48%;
+  }
+}
+
+@media (max-width: 767px) {
+  .services-contents .col-md-4 {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
+/*----------------------------------------
+  6.Skill Area
+----------------------------------------*/
+
+.our-skill-area {
+  position: relative;
+}
+
+.test-overly {
+  /* background: rgba(0, 0, 0, 0.80); */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.progress-h4 {
+  color: #444;
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: -90px;
+  margin-bottom: 50px;
+}
+
+#skill.area-padding{
+  padding-top: 0;
+}
+
+/*----------------------------------------
+ 7.Portfolio Area Css
+----------------------------------------*/
+
+.pst-content {
+  padding-left: 10px;
+}
+
+.project-menu {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.project-menu li {
+  display: inline-block;
+}
+
+.project-menu li a {
+  color: #444;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 4px;
+  padding: 6px 15px;
+  text-transform: capitalize;
+  transition: all 0.3s ease 0s;
+}
+
+.project-menu li a.active, .project-menu li a:hover {
+  border: 1px solid #96b68d;
+  color: #96b68d;
+  text-decoration: none;
+  border-radius: 50px;
+}
+
+.single-awesome-portfolio {
+  float: left;
+  overflow: hidden;
+  padding: 15px;
+  width: 25%;
+  position: relative;
+}
+
+.single-awesome-project {
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.first-item {
+  margin-bottom: 30px;
+}
+
+.awesome-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 13px;
+  overflow: hidden;
+  border: 1px solid #96b68d;
+}
+
+.awesome-img img {width: 100%;}
+
+.awesome-img>a {
+  display: block;
+  position: relative;
+}
+
+.single-awesome-project:hover .awesome-img>a::after {
+  opacity: 1;
+}
+
+.single-awesome-project:hover .add-actions {
+  opacity: 1;
+  bottom: 0;
+}
+
+.awesome-img>a::after {
+  background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.add-actions {
+  background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
+  bottom: 30px;
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 60px 15px;
+  position: absolute;
+  transition: all 0.4s ease 0s;
+  width: 100%;
+}
+
+.project-dec {
+  display: block;
+  height: 100%;
+  width: 100%;
+  
+}
+
+.project-dec a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.project-dec h4 {
+  margin-bottom: 5px;
+}
+
+.project-dec h4:hover {
+  color: #fff;
+}
+
+.project-dec h4 {
+  color: #ddd;
+  font-size: 24px;
+  margin-top: -45px;
+  padding-top: 50%;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.project-dec span {
+  color: #ddd;
+  font-size: 13px;
+}
+
+.project-action-btn {
+  display: block;
+  height: 100%;
+  text-align: center;
+  transition: all 1s ease 0s;
+  width: 100%;
+}
+
+.project-action-btn li {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.project-action-btn li a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+    display: none;
+}
+
+.popup i {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 50px;
+    color: #fff;
+}
+
+.popup_in {
+    width: 80%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    max-width: 800px;
+}
+
+.popup_in>img,
+.popup_in .artwork_slide {
+    width: 60%;
+}
+
+.artwork_slide {
+    overflow: hidden;
+    position: relative;
+}
+
+.artwork_slide img {
+    width: 100%;
+}
+
+.artwork_slide .swiper-pagination-bullet {
+    background-color: #fff;
+}
+
+.popup_in ul {
+    margin: 0;
+    padding: 30px;
+    width: 40%;
+    box-sizing: border-box;
+    background-color: #fff;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.popup h5 {
+    font-size: 20px;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+
+.popup p {
+    margin-bottom: 0;
+}
+
+.popup i {
+    cursor: pointer;
+}
+
+
+
+/*----------------------------------------*/
+
+
+/*  8.Contact Area
+/*--------------------------------*/
+/*  8.Contact Area
+/*--------------------------------*/
+
+#contact {
+  height: 300px;
+    padding: 50px 0;
+    border-top: 1px solid #f5d2d2;
+    /* 배경 이미지 넣어주기 */
+}
+
+#contact-form input,
+#contact-form textarea {
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 0;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: .2em;
+    font-size: 13px;
+    line-height: 13px;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    color: #444;
+}
+
+#contact-form label.error {
+    margin-top: 10px;
+    margin-bottom: 1em;
+    font-size: 12px;
+    line-height: 12px;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    color: #96b68d;
+    margin-left: 10px
+}
+#contact .col-md-4{
+    text-align: center;
+}
+#contact i{
+    font-size: 50px;
+}
+/*----------------------------------------*/
+
+/*  9.Footer Area
+/*----------------------------------------*/
+
+
+.copyright-text a:hover {
+  text-decoration: underline;
+  color: #444;
+}
+
+.copyright>p {
+  margin-bottom: 0;
+  color: #444;
+}
+.copyright>p>strong {
+  margin-bottom: 0;
+  color: #96b68d;
+}
+
+.credits {
+  padding-top: 5px;
+  text-align: center;
+}
+.contact-icon i {
+  color: #444;  /* 흰색으로 지정 */
+  font-size: 32px; /* 크기도 조절 가능 */
+  margin-bottom: 10px;
+}
+.credits{
+  color: #444;
+  text-align: center;
+
+/*----------------------------------------*/
+
+
+ .End CSS
+
+.spacing{
+  padding-top: 100px;
+}
+.single-well1 ul li{
+  color: #444;
+    display: block;
+    padding: 10px 0;
+}
+.single-well1 ul li i{
+  color: #444;
+    padding-right: 10px;
+    font-size: 12px;
+}
